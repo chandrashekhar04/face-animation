@@ -1,0 +1,124 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(46, 44, 38);
+}
+
+#wrapper{
+    height: 100vh;
+}
+
+.face{
+    width: 12rem;
+    height: 12rem;
+    background-color: rgb(244, 236, 77);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    animation-name: face;
+    animation-duration: 10s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.eye{
+    width: 1.5rem;
+    height: 2rem;
+    background-color: rgb(255, 255, 255);
+    border-radius: 50%;
+    position: absolute;
+    top: 3.5rem;
+    left: 2rem;
+    overflow: hidden;
+}
+
+.eye:nth-of-type(2){
+    left: 8.6rem;
+}
+
+
+.eye1{
+    width: 1.5rem;
+    height: 1.5rem;
+    background-color: black;
+    border-radius: 50%;
+    position: absolute;
+    top: 0.7rem;
+    left: 0.1rem;
+}
+
+
+.eyebrowleft{
+    width: 1.8rem;
+    height: 1rem;
+    border-radius: 50%;
+    border-top: 2px solid;
+    position: absolute;
+    top: 2.5rem;
+    left: 2rem;
+}
+
+.eyebrowright{
+    width: 1.8rem;
+    height: 1rem;
+    border-radius: 50%;
+    border-top: 2px solid;
+    position: absolute;
+    top: 2.5rem;
+    left: 8.3rem;
+}
+
+
+.nose{
+    width: 0.6rem;
+    height: 1.5rem;
+    border: 1px solid;
+    position: absolute;
+    top: 6rem;
+    border-radius: 50%;
+}
+
+
+.mouth{
+    width: 3rem;
+    height: 2rem;
+    border-top: 1px solid;
+    position: absolute;
+    top: 9rem;
+    border-radius: 50%;
+    animation-name: smile;
+    animation-duration: 5s;
+    animation-delay: 0.7s;
+}
+
+
+/* @keyframes face {
+    0%{top: 0;}
+    50%{top: calc(100% - 12rem);}
+    100%{top: 0;}
+} */
+
+
+@keyframes smile {
+    0%{border-top: 1px solid; border-bottom: none;}
+    50%{border-bottom: 1px solid; border-top: none;}
+    100%{border-top: 1px solid; border-bottom: none;}
+}
+
+
+
+@keyframes face {
+    0%{top: 0; left: 0;}
+    14.20%{top: calc(100% - 12rem); left: 0;}
+    28.40%{top: calc(100% - 12rem); left: 35rem;}
+    43.85%{top: 0; left: 35rem;}
+    /* 57.14%{top: 0; left: 35rem;} */
+    71.42%{top: 0; left: 50rem;}
+    85.71%{top: calc(100% - 12rem); left: 50rem;}
+    100%{top: calc(100% - 12rem); left: calc(100% - 12rem);}
+}
